@@ -1,0 +1,219 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Drogon::Drogon::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Drogon__Drogon-Debug-d2d21e25be8ed1aa07d7.json",
+					"name" : "Drogon::Drogon",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "JsonCpp::JsonCpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JsonCpp__JsonCpp-Debug-555854946172bf5feada.json",
+					"name" : "JsonCpp::JsonCpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::Crypto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__Crypto-Debug-e9df67db6707132cce47.json",
+					"name" : "OpenSSL::Crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::SSL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__SSL-Debug-0863ebeed934a7edb425.json",
+					"name" : "OpenSSL::SSL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::applink::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__applink-Debug-5f796607b0c3aa80349d.json",
+					"name" : "OpenSSL::applink",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-Debug-15d3118cf6e2822ec26a.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Trantor::Trantor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Trantor__Trantor-Debug-7014c4bda6a486e59a4c.json",
+					"name" : "Trantor::Trantor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UUID_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UUID_lib-Debug-446dfa66176c6a326eb1.json",
+					"name" : "UUID_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZLIB::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZLIB__ZLIB-Debug-ca38888df96456326889.json",
+					"name" : "ZLIB::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "jsoncpp_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-jsoncpp_lib-Debug-d80179dab948cc0e936a.json",
+					"name" : "jsoncpp_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "jsoncpp_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-jsoncpp_static-Debug-209c54f26e45d634149e.json",
+					"name" : "jsoncpp_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "std::filesystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-std__filesystem-Debug-e2efa1aa97a593151bbc.json",
+					"name" : "std::filesystem",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-17daf49a10ce6ff766e6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rate_limiter",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "rate_limiter_test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rate_limiter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rate_limiter-Debug-afb95520547d35060f5c.json",
+					"name" : "rate_limiter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rate_limiter_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-rate_limiter_test-Debug-dd58ce5d402c997bb505.json",
+					"name" : "rate_limiter_test",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ayush/projects/rate_limiter/build",
+		"source" : "/home/ayush/projects/rate_limiter"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}
