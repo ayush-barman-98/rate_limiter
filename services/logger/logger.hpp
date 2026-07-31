@@ -27,6 +27,12 @@ class Logger{
 
 
     private:
+    // Delete copy and move constructors/assignments
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
+    Logger(Logger&&) = delete;
+    Logger& operator=(Logger&&) = delete;
+
     explicit Logger(const std::string& filename , LogLevel level);
     ~Logger();
 
