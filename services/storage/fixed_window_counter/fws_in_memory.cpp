@@ -1,0 +1,35 @@
+#include "fws_in_memory.hpp"
+#include <chrono>
+
+int64_t InMemoryFixedWindowCounterStorage::increment(const std::string &key, int window_length) {
+    auto current_time = std::chrono::system_clock::now();
+    auto now_sec = std::chrono::duration_cast<std::chrono::seconds>(current_time.time_since_epoch()).count();
+
+    int64_t current_window_time = (now_sec / window_length) * window_length;
+
+    std::lock_guard<std::mutex> lock(mutex);
+
+    auto itr = store.find(key);
+    if (itr != store.end()) {
+        int64_t last_window_time = itr->second.first;
+        if (last_window_time == current_window_time) {
+            itr->second.second++;
+            return itr->second.second;
+        }
+    }
+
+    store[key] = { current_window_time, 1 };
+    return 1;
+}
+
+int64_t InMemoryFixedWindowCounterStorage::get(const std::string &key) {
+    std::lock_guard<std::mutex> lock(mutex);
+    auto itr = store.find(key);
+    if (itr == store.end()) return 0;
+    return itr->second.second;
+}
+
+void InMemoryFixedWindowCounterStorage::remove(const std::string &key) {
+    std::lock_guard<std::mutex> lock(mutex);
+    store.erase(key);
+}
