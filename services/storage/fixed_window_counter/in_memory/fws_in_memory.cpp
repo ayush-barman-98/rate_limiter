@@ -1,9 +1,8 @@
-#include "fws_in_memory.hpp"
-#include <chrono>
+#include "cache.hpp"
+#include "utils/time_utils.hpp"
 
 int64_t InMemoryFixedWindowCounterStorage::increment(const std::string &key, int window_length) {
-    auto current_time = std::chrono::system_clock::now();
-    auto now_sec = std::chrono::duration_cast<std::chrono::seconds>(current_time.time_since_epoch()).count();
+    int64_t now_sec = utils::getCurrentTimeInSeconds();
 
     int64_t current_window_time = (now_sec / window_length) * window_length;
 
