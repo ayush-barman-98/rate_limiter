@@ -45,7 +45,8 @@ aux_source_directory(controllers CTL_SRC)
 aux_source_directory(filters FILTER_SRC)
 aux_source_directory(plugins PLUGIN_SRC)
 aux_source_directory(models MODEL_SRC)
-aux_source_directory(services/logger SERVICE_SRC)
+file(GLOB_RECURSE SERVICE_SRC "services/*.cpp" "services/*.cc")
+file(GLOB_RECURSE UTILS_SRC "utils/*.cpp" "utils/*.cc")
 
 drogon_create_views(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/views
                     ${CMAKE_CURRENT_BINARY_DIR})
@@ -67,7 +68,8 @@ target_sources(${PROJECT_NAME}
                ${FILTER_SRC}
                ${PLUGIN_SRC}
                ${MODEL_SRC}
-               ${SERVICE_SRC})
+               ${SERVICE_SRC}
+               ${UTILS_SRC})
 # ##############################################################################
 # uncomment the following line for dynamically loading views 
 # set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS ON)

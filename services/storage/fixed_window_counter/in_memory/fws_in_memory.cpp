@@ -1,4 +1,4 @@
-#include "cache.hpp"
+#include "fws_in_memory.hpp"
 #include "utils/time_utils.hpp"
 
 int64_t InMemoryFixedWindowCounterStorage::increment(const std::string &key, int window_length) {

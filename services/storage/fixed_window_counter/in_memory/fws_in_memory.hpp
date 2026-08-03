@@ -1,5 +1,5 @@
 #pragma once
-#include "fws_interface.hpp"
+#include "services/storage/fixed_window_counter/fws_interface.hpp"
 #include <unordered_map>
 #include <mutex>
 #include <utility>
